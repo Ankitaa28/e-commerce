@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -469,3 +470,264 @@ span {
   border-radius: 7px;
 }
 
+/* Mobile Styles (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    #header {
+      flex-direction: column;
+      padding: 10px 20px;
+    }
+  
+    .header-logo img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .header-list-nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-list-nav ul li {
+      padding: 10px 0;
+    }
+  
+    #hero {
+      height: auto;
+      padding: 20px;
+      text-align: center;
+      background-size: contain;
+      background-position: center;
+    }
+  
+    #hero h1, #hero h2, #hero h4 {
+      font-size: 30px;
+    }
+  
+    #hero button {
+      width: 200px;
+      height: 50px;
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    #features {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    #features .f-box {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .product-section .pro-collection {
+      flex-direction: column;
+      margin: 0;
+    }
+  
+    #banners .big-banners, 
+    #banners .small-banners {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #footer {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+  }
+  
+  /* Tablet Styles (max-width: 768px) */
+  @media only screen and (max-width: 768px) {
+    #header {
+      padding: 15px 40px;
+    }
+  
+    .header-list-nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-list-nav ul li {
+      padding: 15px 0;
+    }
+  
+    #hero {
+      padding: 40px 40px;
+      background-size: cover;
+      text-align: center;
+    }
+  
+    #hero h1 {
+      font-size: 50px;
+    }
+  
+    #hero h2, #hero h4 {
+      font-size: 40px;
+    }
+  
+    #hero button {
+      width: 220px;
+      height: 55px;
+    }
+  
+    #features {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    #features .f-box {
+      width: 48%;
+      margin: 10px 0;
+    }
+  
+    .product-section .pro-collection {
+      margin: 0 20px;
+    }
+  
+    #banners .big-banners div,
+    #banners .small-banners div {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    #footer {
+      padding: 60px 40px;
+    }
+  }
+  /* Hide the default menu for mobile */
+.header-list-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #1a1a1a;
+    transition: 0.3s;
+  }
+  @media only screen and (max-width: 768px) {
+    #hero {
+        width: 100%;
+      height: 80vh; /* Adjust the height for mobile */
+      background-size: cover; /* Ensures the image covers the area */
+      background-position: center top; /* Focus on the top center of the image */
+      padding: 0 20px; /* Reduce padding on mobile */
+    }
+  
+    /* Adjust text size for mobile */
+    #hero h1 {
+      font-size: 40px;
+    }
+  
+    #hero h2 {
+      font-size: 35px;
+    }
+  
+    #hero h4 {
+      font-size: 20px;
+    }
+  
+    /* Adjust the button for mobile */
+    #hero button {
+      width: 180px;
+      height: 50px;
+      font-size: 16px;
+      padding: 10px 40px;
+    }
+  }
+  
+  /* Mobile styles: Show hamburger and hide menu */
+ /* Hide the default menu for mobile */
+.header-list-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #1a1a1a;
+    transition: 0.3s;
+  }
+  
+  /* Mobile styles: Show hamburger and hide menu */
+  @media only screen and (max-width: 768px) {
+    .header-list-nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #e3e6f3;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      z-index: 999;
+    }
+  
+    .header-list-nav ul.active {
+      display: flex;
+    }
+    .header-list-icon{
+        display: none;
+      }
+    .header-list-nav ul li {
+      padding: 15px 0;
+    }
+  
+    .header-list-nav ul li a {
+      font-size: 18px;
+      color: #1a1a1a;
+    }
+  
+    /* Hamburger icon styles */
+    .hamburger {
+      display: flex;
+    }
+  
+    /* Transform hamburger to X when active */
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+  /* Hide header icons for mobile screens */
+@media only screen and (max-width: 768px) {
+    .header-list-icon {
+      display: none;
+    }
+  }
+  
+  /* Show header icons for screens larger than 768px */
+  @media only screen and (min-width: 769px) {
+    .header-list-icon {
+      display: flex; /* Use flex to align the icons properly */
+    }
+  }
+  
